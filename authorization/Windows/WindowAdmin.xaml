@@ -1,0 +1,33 @@
+﻿<Window x:Class="authorization.Windows.WindowAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:authorization.Windows"
+        mc:Ignorable="d"
+        Title="Product" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnAddProduct" Content="Добавить" Click="btnAddProduct_Click"/>
+                <Button x:Name="btnEditProduct" Content="Редактировать" Click="btnEditProduct_Click"/>
+                <Button x:Name="btnDelete" Content="Удалить" Click="btnDelete_Click"/>
+                <TextBox Name="tbFind" Width="160" TextChanged="tbFind_TextChanged"/>
+                <ComboBox Name="cmbManufacturer" Width="139" SelectionChanged="cmbManufacturer_SelectionChanged">
+                    <ComboBoxItem>Все производители</ComboBoxItem>
+                    <ComboBoxItem>Davinci</ComboBoxItem>
+                    <ComboBoxItem>Attribute</ComboBoxItem>
+                    <ComboBoxItem>Doria</ComboBoxItem>
+                    <ComboBoxItem>Alaska</ComboBoxItem>
+                    <ComboBoxItem>Apollo</ComboBoxItem>
+                    <ComboBoxItem>Smart Home</ComboBoxItem>
+                    <ComboBoxItem>Mayer Boch</ComboBoxItem>
+                </ComboBox>
+                <Button x:Name="btnIncreasing" Content="По возрастанию" Click="btnIncreasing_Click"/>
+                <Button x:Name="btnDecreasing" Content="По убыванию" Click="btnDecreasing_Click"/>
+                <Button x:Name="btnEXit" Content="Выход" Click="btnExit_Click" RenderTransformOrigin="3.269,0.721"/>
+            </StackPanel>
+            <DataGrid x:Name="dgProduct" AutoGenerateColumns="True" IsReadOnly="True"/>
+        </StackPanel>        
+    </Grid>
+</Window>
